@@ -16,5 +16,6 @@ require (
 	github.com/tkanos/gonfig v0.0.0-20181112185242-896f3d81fadf
 	github.com/valyala/fasttemplate v1.0.1 // indirect
 	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
+	google.golang.org/appengine v1.5.0 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
 )
