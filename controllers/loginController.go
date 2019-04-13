@@ -6,19 +6,14 @@ import (
 	"login-golang/models"
 	"net/http"
 
+	hash "github.com/aryadiahmad4689/hash-bycript"
+
 	"github.com/labstack/echo"
-	"golang.org/x/crypto/bcrypt"
 )
 
 // index Login
 func IndexLogin(c echo.Context) error {
 	return c.Render(http.StatusOK, "login", map[string]interface{}{})
-}
-
-// cek hash password
-func CheckPasswordHash(password, hash string) bool {
-	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
-	return err == nil
 }
 
 // func Login
@@ -31,7 +26,7 @@ func LoginSave(c echo.Context) error {
 	for _, v := range user {
 		username := fmt.Sprintf("%s", v.Username)
 		pass := fmt.Sprintf("%s", v.Password)
-		match := CheckPasswordHash(password, pass)
+		match := hash.CheckPasswordHash(password, pass)
 		if username == usernames && match == true {
 			return c.JSON(http.StatusOK, user)
 		}
