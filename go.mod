@@ -3,7 +3,7 @@ module login-golang
 go 1.12
 
 require (
-	github.com/aryadiahmad4689/hash-bycript v0.0.0-20190413025138-bb366c23fe0c
+	github.com/aryadiahmad4689/hash-bycript v0.0.0-20190413081645-f12c7f666eef
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
